@@ -2,9 +2,9 @@
 
 Command	Usage
 
-ps aux	Show all running processes
+ps aux	  Show all running processes
 
-top	Live view of CPU and memory usage
+top	      Live view of CPU and memory usage
 
 htop	Interactive process viewer (better top)
 
