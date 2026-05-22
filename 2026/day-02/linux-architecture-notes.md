@@ -157,6 +157,7 @@ Enable service at boot
 sudo systemctl enable nginx
 View logs
 journalctl -u nginx
+
 2. How Processes Are Created and Managed
 
 A process = running program.
@@ -293,20 +294,21 @@ memory usage
 zombie processes
 disk IO
 stuck services
+
+
 # Important Mental Model
 
-Think like this:
+#### Think like this:
 
 systemd manages services
 services run processes
 processes use kernel resources
 kernel controls hardware
 
-This single line explains most Linux troubleshooting.
+Everything in Linux is file or directory
 
-Beginner Practice Tasks
 
-Try these on your Linux machine or VM.
+# Practice Tasks:
 
 Task 1 — Check PID 1
 ps -p 1
@@ -341,4 +343,4 @@ kernel
 processes
 systemd
 
-gives you the foundation to solve all of them.
+gives the foundation to solve all of them.
