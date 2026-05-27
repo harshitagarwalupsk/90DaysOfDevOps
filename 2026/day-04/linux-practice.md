@@ -3,6 +3,7 @@
 ## Process inspection using ps and pgrep
 
 root@ip-172-31-10-246:~# ps aux | head
+
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.3  1.7  25236 16044 ?        Ss   15:18   0:03 /sbin/init
 root           2  0.0  0.0      0     0 ?        S    15:18   0:00 [kthreadd]
@@ -16,6 +17,7 @@ root          10  0.0  0.0      0     0 ?        I<   15:18   0:00 [kworker/0:0H
 
 
 root@ip-172-31-10-246:~# pgrep sshd
+
 1082
 1181
 1298
@@ -24,6 +26,7 @@ root@ip-172-31-10-246:~# pgrep sshd
 ## Service inspection using systemctl
 
 root@ip-172-31-10-246:~# systemctl status ssh
+
 ● ssh.service - OpenBSD Secure Shell server
      Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
     Drop-In: /usr/lib/systemd/system/ssh.service.d
@@ -51,6 +54,7 @@ root@ip-172-31-10-246:~#
 
 
 root@ip-172-31-10-246:~# systemctl list-units --type=service --state=running
+
   UNIT                                           LOAD   ACTIVE SUB     DESCRIPTION
   acpid.service                                  loaded active running ACPI event daemon
   chrony.service                                 loaded active running chrony, an NTP client/server
@@ -84,7 +88,9 @@ Legend: LOAD   → Reflects whether the unit definition was properly loaded.
 
 
 ## Log inspection using journalctl
+
 root@ip-172-31-10-246:~# journalctl -u ssh --no-pager | tail -n 5
+
 May 27 15:18:13 ip-172-31-10-246 sshd[1082]: Server listening on 0.0.0.0 port 22.
 May 27 15:18:13 ip-172-31-10-246 sshd[1082]: Server listening on :: port 22.
 May 27 15:18:13 ip-172-31-10-246 systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
@@ -94,6 +100,7 @@ May 27 15:25:32 ip-172-31-10-246 sshd-session[1181]: pam_unix(sshd:session): ses
 ## Basic Linux troubleshooting workflow
 
 root@ip-172-31-10-246:~# tail -n 20 /var/log/syslog
+
 2026-05-27T15:33:13.959959+00:00 ip-172-31-10-246 systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
 2026-05-27T15:33:14.074517+00:00 ip-172-31-10-246 systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
 2026-05-27T15:33:14.074918+00:00 ip-172-31-10-246 systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
