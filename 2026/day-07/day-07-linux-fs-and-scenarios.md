@@ -76,15 +76,23 @@ google/
 Custom application folders
 
 ## Directory	            Easy Memory
-/	                    Everything starts here
-/home	                User personal files
-/root	                Admin user's home
-/etc	                Editable configs
-/var/log	            Logs for troubleshooting
-/tmp	                Temporary testing area
-/bin	                Basic commands
-/usr/bin	            Installed programs
-/opt	                Optional software
+/	                    :  Everything starts here
+
+/home	                :  User personal files
+
+/root	                :  Admin user's home
+
+/etc	                :  Editable configs
+
+/var/log	            :  Logs for troubleshooting
+
+/tmp	                :  Temporary testing area
+
+/bin	                :  Basic commands
+
+/usr/bin	            :  Installed programs
+
+/opt	                :  Optional software
 
 
 
