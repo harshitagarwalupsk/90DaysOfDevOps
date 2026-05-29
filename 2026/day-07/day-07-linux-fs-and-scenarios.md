@@ -85,3 +85,23 @@ Custom application folders
 /bin	                Basic commands
 /usr/bin	            Installed programs
 /opt	                Optional software
+
+
+
+### root@ip-172-31-11-66:~# du -sh /var/log/* 2>/dev/null | sort -h | tail -5
+128K    /var/log/kern.log
+280K    /var/log/cloud-init.log
+284K    /var/log/sysstat
+388K    /var/log/syslog
+17M     /var/log/journal
+### root@ip-172-31-11-66:~# cat /etc/hostname
+ip-172-31-11-66
+### root@ip-172-31-11-66:~# ls -la ~
+total 28
+drwx------  4 root root 4096 May 29 06:03 .
+drwxr-xr-x 19 root root 4096 May 29 16:20 ..
+-rw-------  1 root root   23 May 29 06:03 .bash_history
+-rw-r--r--  1 root root 3106 Apr 20 08:46 .bashrc
+-rw-r--r--  1 root root  132 Apr 20 08:46 .profile
+drwx------  2 root root 4096 May 28 16:51 .ssh
+drwx------  3 root root 4096 May 28 16:51 snap
